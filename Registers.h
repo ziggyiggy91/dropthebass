@@ -34,7 +34,7 @@
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 // 
 // This is part of revision 1.0 of the Tiva Firmware Development Package.
-//
+// 
 //*****************************************************************************
 
 #ifndef __TM4C123GH6PM_H__
