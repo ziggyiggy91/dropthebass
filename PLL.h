@@ -2,7 +2,7 @@
 // the PLL to the desired frequency.
 #define SYSDIV2 4
  //39
-// bus frequency is 400MHz/(SYSDIV2+1) = 400MHz/(4+39) = 10 MHz
+// bus frequency is 400MHz/(SYSDIV2+1) = 400MHz/(4+39) = 10 MHz  
 
 // configure the system to get its clock from the PLL
 void PLL_Init(void);
