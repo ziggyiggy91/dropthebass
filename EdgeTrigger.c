@@ -36,7 +36,7 @@ void EdgeCounter_Init(void){	volatile unsigned long delay;
   GPIO_PORTF_ICR_R = 0x01;      // (e) clear flag0,flag1
   GPIO_PORTF_IM_R |= 0x01;      // (f) arm interrupt on PD2
 	
- 	NVIC_PRI7_R = (NVIC_PRI7_R&0x000FFFFF)|0x00100000; // (g) priority 1
+ 	NVIC_PRI7_R = (NVIC_PRI7_R&0x000FFFFF)|0x00100000; // (g) priority 1 
 
   NVIC_EN0_R = 0x40000008;      // (h) enable interrupt 8 in NVIC
  }
