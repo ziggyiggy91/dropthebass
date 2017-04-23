@@ -1,0 +1,12 @@
+.\main.o: main.c
+.\main.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\main.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\main.o: Registers.h
+.\main.o: PLL.h
+.\main.o: GPIO.h
+.\main.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\main.o: EdgeTrigger.h
+.\main.o: PWM.h
+.\main.o: UART.h
+.\main.o: ST7735.h
+.\main.o: Drop_the_Bass.h

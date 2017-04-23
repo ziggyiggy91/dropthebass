@@ -11,7 +11,7 @@ void portA_init(){
 	delay = SYSCTL_RCGC2_R;
   GPIO_PORTA_AFSEL_R |= 0x03;    // enable alt funct on PA1-0	GPIO_PORTA_PUR_R = 0X00;
 	GPIO_PORTA_DEN_R = 0XFF;
-	GPIO_PORTA_CR_R = 0XFF;	
+	GPIO_PORTA_CR_R = 0XFF;	   
 	GPIO_PORTA_PUR_R = 0X00;	
   GPIO_PORTA_AMSEL_R &= 0x00;  
 }
