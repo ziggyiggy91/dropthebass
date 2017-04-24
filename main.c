@@ -14,7 +14,8 @@ void pitch_Handler(uint8_t string_select,uint8_t pitch_select);
 
 int i ;
 volatile uint32_t timer = 0,ready = 1,CaptureData = 0,average = 0,tick = 0,averager = 0,counter = 0;
-volatile long Counts = 0;
+volatile long Counts = 0;  
+volatile long Error  = 0;
 
 unsigned int string_select = 4; //starts off on string 4
 volatile static unsigned int pitch_select[] = {0,0,0,0}; //sets pitch to standard tuning
@@ -29,7 +30,7 @@ unsigned long pitch_index; //index for fixed signals
 unsigned int overflow; // checks if signal and string select are valid
 unsigned int timer_value;
 unsigned int count;
- 
+  
 const int sting4S = 7, sting3S = 7,sting2S = 7,sting1S = 7;
 char string4[sting4S][2] = {"E","D#","D","C#","C","B"}; 
 char string3[sting3S][2] = {"A","G#","G","F#","F","E"};
@@ -57,7 +58,7 @@ int main(){
 	UART0_Init();
 	portF_init();
 	EdgeCounter_Init();
-
+  PWM0A_Init(10000, 0);
 	ST7735_InitR(INITR_REDTAB);
 	ST7735_FillScreen(ST7735_BLACK);
 	ST7735_SetRotation(1);
@@ -129,8 +130,11 @@ void GPIOPortD_Handler(){ 		GPIO_PORTF_DATA_R = 0x02;
 				tick++;
 				average = (average + Counts);
 				averager = average/tick; 
-				 
-	 
+				//String G
+				if(string_select == 1){
+					Error = Counts - string1P[pitch1];
+					PWM0A_Duty(9999 - Error);
+				}
 				UART_OutUDec(1/(Counts*.00001));
 				UART_OutChar('H');
 				UART_OutChar('Z');
