@@ -1,49 +1,0 @@
-Dependencies for Project 'dtb', Target 'Target 1': (DO NOT MODIFY !)
-F (.\src\Drop_The_Bass.c)(0x5E410BB2)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I.\inc-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C1231C3PM-o .\drop_the_bass.o --omf_browse .\drop_the_bass.crf --depend .\drop_the_bass.d)
-I (.\inc\UART.h)(0x5E410AF3)
-F (.\src\EdgeTrigger.c)(0x5E410BFA)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I.\inc-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C1231C3PM-o .\edgetrigger.o --omf_browse .\edgetrigger.crf --depend .\edgetrigger.d)
-I (.\inc\Registers.h)(0x5E4108D7)
-I (.\inc\EdgeTrigger.h)(0x5E4108D7)
-F (.\src\GPIO.c)(0x5E410C00)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I.\inc-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C1231C3PM-o .\gpio.o --omf_browse .\gpio.crf --depend .\gpio.d)
-I (.\inc\Registers.h)(0x5E4108D7)
-I (.\inc\GPIO.h)(0x5E4108D7)
-I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C89844)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C89844)
-I (C:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C89844)
-F (.\src\main.c)(0x5E41113C)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I.\inc-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C1231C3PM-o .\main.o --omf_browse .\main.crf --depend .\main.d)
-I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C89844)
-I (C:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C89844)
-I (C:\Keil\ARM\ARMCC\include\math.h)(0x51C89844)
-I (.\inc\Registers.h)(0x5E4108D7)
-I (.\inc\PLL.h)(0x5E4108D7)
-I (.\inc\GPIO.h)(0x5E4108D7)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C89844)
-I (.\inc\EdgeTrigger.h)(0x5E4108D7)
-I (.\inc\PWM.h)(0x5E4108D7)
-I (.\inc\UART.h)(0x5E410AF3)
-I (.\inc\ST7735.h)(0x5E4108D7)
-I (.\inc\Drop_the_Bass.h)(0x5E4108D7)
-F (.\src\PLL.c)(0x5E4108D7)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I.\inc-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C1231C3PM-o .\pll.o --omf_browse .\pll.crf --depend .\pll.d)
-I (.\inc\Registers.h)(0x5E4108D7)
-I (.\inc\PLL.h)(0x5E4108D7)
-F (.\src\PWM.c)(0x5E4108D7)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I.\inc-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C1231C3PM-o .\pwm.o --omf_browse .\pwm.crf --depend .\pwm.d)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C89844)
-I (.\inc\Registers.h)(0x5E4108D7)
-F (.\src\ST7735.c)(0x5E4108D7)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I.\inc-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C1231C3PM-o .\st7735.o --omf_browse .\st7735.crf --depend .\st7735.d)
-I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C89844)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C89844)
-I (C:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C89844)
-I (.\inc\ST7735.h)(0x5E4108D7)
-I (.\inc\Registers.h)(0x5E4108D7)
-F (.\src\UART.c)(0x5E410C2A)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I.\inc-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C1231C3PM-o .\uart.o --omf_browse .\uart.crf --depend .\uart.d)
-I (.\inc\Registers.h)(0x5E4108D7)
-I (.\inc\UART.h)(0x5E410AF3)
-F (.\Startup.s)(0x5E4108D7)(--cpu Cortex-M4.fp --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123--list .\startup.lst --xref -o .\startup.o --depend .\startup.d)
-F (.\inc\UART.h)(0x5E410AF3)()
-F (.\inc\Drop_the_Bass.h)(0x5E4108D7)()
-F (.\inc\EdgeTrigger.h)(0x5E4108D7)()
-F (.\inc\GPIO.h)(0x5E4108D7)()
-F (.\inc\PLL.h)(0x5E4108D7)()
-F (.\inc\PWM.h)(0x5E4108D7)()
-F (.\inc\Registers.h)(0x5E4108D7)()
-F (.\inc\ST7735.h)(0x5E4108D7)()
