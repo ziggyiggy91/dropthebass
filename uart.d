@@ -1,3 +1,3 @@
-.\uart.o: UART.c
-.\uart.o: Registers.h
-.\uart.o: UART.h
+.\uart.o: src\UART.c
+.\uart.o: .\inc\Registers.h
+.\uart.o: .\inc\UART.h

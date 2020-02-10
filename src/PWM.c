@@ -10,7 +10,6 @@
 #define SYSCTL_RCC_PWMDIV_M     0x000E0000  // PWM Unit Clock Divisor
 #define SYSCTL_RCC_PWMDIV_2     0x00000000  // /2
 
-
 // period is 16-bit number of PWM clock cycles in one period (3<=period)
 // period for PB6 and PB7 must be the same
 // duty is number of PWM clock cycles output is high  (2<=duty<=period-1)
@@ -45,7 +44,6 @@ void PWM0A_Init(uint32_t period, uint16_t duty){
 void PWM0A_Duty(uint32_t duty){
   PWM0_0_CMPA_R = duty - 1;             // 6) count value when output rises
 }
-
 
 // period is 16-bit number of PWM clock cycles in one period (3<=period)
 // period for PB6 and PB7 must be the same

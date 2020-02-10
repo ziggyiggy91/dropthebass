@@ -1,3 +1,3 @@
-.\pll.o: PLL.c
-.\pll.o: Registers.h
-.\pll.o: PLL.h
+.\pll.o: src\PLL.c
+.\pll.o: .\inc\Registers.h
+.\pll.o: .\inc\PLL.h

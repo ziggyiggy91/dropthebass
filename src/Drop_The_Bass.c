@@ -1,7 +1,5 @@
 #include "UART.h"
 
-
-
 void Header(){
 UART_OutString("\t\t\t     UART Interface%");UART_OutChar(CR);UART_OutChar(LF);
 

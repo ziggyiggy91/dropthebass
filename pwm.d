@@ -1,3 +1,3 @@
-.\pwm.o: PWM.c
+.\pwm.o: src\PWM.c
 .\pwm.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
-.\pwm.o: Registers.h
+.\pwm.o: .\inc\Registers.h

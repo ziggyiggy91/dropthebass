@@ -1,3 +1,3 @@
-.\edgetrigger.o: EdgeTrigger.c
-.\edgetrigger.o: Registers.h
-.\edgetrigger.o: EdgeTrigger.h
+.\edgetrigger.o: src\EdgeTrigger.c
+.\edgetrigger.o: .\inc\Registers.h
+.\edgetrigger.o: .\inc\EdgeTrigger.h
