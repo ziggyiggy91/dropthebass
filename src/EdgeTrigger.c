@@ -5,17 +5,17 @@ void EdgeCounter_Init(void)
 {
 	volatile unsigned long delay;
 
-	SYSCTL_RCGC2_R |= 0x00000028;						   // (a) activate clock for port D & F
+	SYSCTL_RCGC2_R |= 0x00000028;						 // (a) activate clock for port D & F
 	delay = SYSCTL_RCGC2_R;								   // delay
-	GPIO_PORTD_LOCK_R = 0x4C4F434B;						   // 2) unlock GPIO Port F
-	GPIO_PORTD_CR_R = 0xFF;								   // allow changes to PF4,0
-	GPIO_PORTD_AMSEL_R = 0;								   //     disable analog functionality on PF	// (f)disable interrupt on PD2
-	GPIO_PORTD_PCTL_R &= ~0xFFFFFFFF;					   // configure PF4 as GPIO
-	GPIO_PORTD_DIR_R &= ~0xFF;							   // (c) make PD2 in (built-in button)
-	GPIO_PORTD_AFSEL_R &= ~0xFF;						   //     disable alt funct on PD2
-	GPIO_PORTD_DEN_R |= 0xFF;							   //     enable digital I/O on PF4
+	GPIO_PORTD_LOCK_R = 0x4C4F434B;					 // 1) unlock GPIO Port D
+	GPIO_PORTD_CR_R = 0xFF;								   // allow changes to PD4,0
+	GPIO_PORTD_AMSEL_R = 0;								   //     disable analog functionality on PD	// (f)disable interrupt on PD2
+	GPIO_PORTD_PCTL_R &= ~0xFFFFFFFF;				 // configure PD4 as GPIO
+	GPIO_PORTD_DIR_R &= ~0xFF;							 // (c) make PD2 in (built-in button)
+	GPIO_PORTD_AFSEL_R &= ~0xFF;						 //     disable alt funct on PD2
+	GPIO_PORTD_DEN_R |= 0xFF;							   //     enable digital I/O on PD4
 	GPIO_PORTD_IS_R &= ~0xFF;							   // (d) PD2 is edge-sensitive
-	GPIO_PORTD_IBE_R &= ~0xFF;							   //     PD2 is not both edges
+	GPIO_PORTD_IBE_R &= ~0xFF;							 //     PD2 is not both edges
 	GPIO_PORTD_PUR_R |= 0x00;							   //    disable weak pull-up on PD0
 	GPIO_PORTD_IEV_R &= 0xFF;							   //     PD2 falling edge event
 	GPIO_PORTD_ICR_R = 0xFF;							   // (e) clear flag0,flag1
@@ -23,19 +23,19 @@ void EdgeCounter_Init(void)
 	NVIC_PRI0_R = (NVIC_PRI0_R & 0x0FFFFFFF) | 0x00000000; // (g) priority 0
 
 	//PORTF
-	GPIO_PORTF_LOCK_R = 0x4C4F434B;   // 2) unlock GPIO Port F
-	GPIO_PORTF_CR_R = 0x01;			  // allow changes to PF4,0
-	GPIO_PORTF_AMSEL_R = 0;			  //     disable analog functionality on PF	// (f)disable interrupt on PD2
-	GPIO_PORTF_PCTL_R &= ~0xFFFFFFFF; // configure PF4 as GPIO
-	GPIO_PORTF_DIR_R &= ~0x01;		  // (c) make PD2 in (built-in button)
-	GPIO_PORTF_AFSEL_R &= ~0x01;	  //     disable alt funct on PD2
-	GPIO_PORTF_DEN_R |= 0x01;		  //     enable digital I/O on PF4
-	GPIO_PORTF_IS_R &= ~0x01;		  // (d) PD2 is edge-sensitive
-	GPIO_PORTF_IBE_R &= ~0x01;		  //     PD2 is not both edges
-	GPIO_PORTF_PUR_R |= 0x00;		  //    disable weak pull-up on PD0
-	GPIO_PORTF_IEV_R &= 0x01;		  //     PD2 falling edge event
-	GPIO_PORTF_ICR_R = 0x01;		  // (e) clear flag0,flag1
-	GPIO_PORTF_IM_R |= 0x01;		  // (f) arm interrupt on PD2
+	GPIO_PORTF_LOCK_R = 0x4C4F434B;       // 2) unlock GPIO Port F
+	GPIO_PORTF_CR_R = 0x01;			          // allow changes to PF4,0
+	GPIO_PORTF_AMSEL_R = 0;			          // disable analog functionality on PF	// (f)disable interrupt on PD2
+	GPIO_PORTF_PCTL_R &= ~0xFFFFFFFF;     // configure PF4 as GPIO
+	GPIO_PORTF_DIR_R &= ~0x01;		        //(c) make PF2 in (built-in button)
+	GPIO_PORTF_AFSEL_R &= ~0x01;	        // disable alt funct on PF2
+	GPIO_PORTF_DEN_R |= 0x01;		          // enable digital I/O on PF4
+	GPIO_PORTF_IS_R &= ~0x01;		          //(d) PF2 is edge-sensitive
+	GPIO_PORTF_IBE_R &= ~0x01;		        // PF2 is not both edges
+	GPIO_PORTF_PUR_R |= 0x00;		          // disable weak pull-up on PF0
+	GPIO_PORTF_IEV_R &= 0x01;		          // PF2 falling edge event
+	GPIO_PORTF_ICR_R = 0x01;		          // (e) clear flag0,flag1
+	GPIO_PORTF_IM_R |= 0x01;		          // (f) arm interrupt on PF2
 
 	NVIC_PRI7_R = (NVIC_PRI7_R & 0x000FFFFF) | 0x00100000; // (g) priority 1
 

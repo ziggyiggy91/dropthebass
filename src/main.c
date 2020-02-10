@@ -80,8 +80,8 @@ int main(){
   init_meter();
   while(1){
 	   GPIO_PORTF_DATA_R = 0x00;   
-  pitch_error(error);
-   	}		
+     pitch_error(error);
+  }		
 }
 /*
 Systick timer sampling at 100KHz, 1us.
@@ -92,8 +92,7 @@ void SysTick_Handler(void){
 	if(Counts < SYSTICK_MAX_VAL){
   Counts = Counts + 1;
 	}
-	else
-	{
+	else{
 		Counts = 0; tick = 0;average = 0;averager = 0;
 		GPIO_PORTF_DATA_R = 0x00;       // disable PF2
 		NVIC_ST_CTRL_R = ~0x07; // disable SysTick with core clock and interrupts
